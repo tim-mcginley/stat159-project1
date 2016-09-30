@@ -1,3 +1,4 @@
+
 ### Discussion
 #### File Structure Setup
 
@@ -88,5 +89,59 @@ Markdown can do much, much more formatting than this.  I'll highlight any fancy 
 To make life easier on myself, I switched from using nano in the command line to a more robust standalone markdown called MacDown, and it is with that application that I wrote these words.
 
 
+#### Git
+
+Any project, especially collaborative projects, require keeping careful track of changes made and a firm grasp on the chronology of the versions produced.  Working on the wrong version of the file can lead to disaster.  To help with this and other issues like accidental deletion, version control software like Git has become very popular.  Software like Git keeps track of changes and updates made to files and folders as you make them (and "commit" the changes), and keeps a record of each committed change such that files from any version can be recreated seamlessly.  This allows multiple people to work on the same project without risk of permanently overwriting or deleting anything, and is helpful for organization and backup purposes even for personal projects.  Directories that are managed by git are called "Repositories."
+
+I set up "project1" as a git repository by using the following commands.
+
+``` 
+cd ~/Documents/159/stat159projects/project1
+git init
+git add images
+git add paper
+git status
+git commit -m "Initial commit with files in place"
+```
+This last command includes a note describing the action taken.
+
+#### GitHub
+
+Git repositories also have the ability to be used remotely, and one website which takes advantage of this fact is GitHub.  A git repository that is set up to work with GitHub gets uploaded to and displayed on the website, making a project accessible from anywhere on earth.  It also allows for easy collaborating and includes many tools to help merge and organize large collaborative projects. GitHub is also a way to publish certain versions of code for others, even unknown internet users, to study or improve on.  This makes it a 'hub' of activity for open source software development. 
+
+Here's how we can tie our repository to my public one on GitHub.
+
+```
+git remote add origin https://github.com/tim-mcginley/stat159-project1.git
+git remote -v
+git push origin master
+```
+
+The local and remote repos are now in sync.  Now, every time I want to change any of my files, I'll have to push them to GitHub or they will not update.
 
 
+
+#### GNU Make
+Even though we have divided the project into many different pieces for good reasons, at the end here there has to be a final paper that's all in one piece and in a specific format.  This could be done manually, of course, but it can also be automated using the make command.  "Make" can make use of many other bash commands and bash software, like the universal document converter "Pandoc" which I will talk about in the next section. 
+
+Make requires a file with instructions called a "Makefile" to tell it what to do.  This report is a simple concatenation of the .md files we created earlier, converted to html.  Here's what the contents of the makefile for this project looks like:
+
+```
+# all
+all: paper.html
+
+#HTML
+paper.html: paper.md
+	cd paper; pandoc paper.md -s -o paper.html
+
+#Merging sections
+paper.md: paper/sections/00-abstract.md paper/sections/01-introduction.md paper/sections/02-discussion.md paper/sections/03-conclusions.md
+	cd paper/sections; pandoc *.md -s -o paper.md; mv paper.md ../
+
+```
+
+The words before the colons are targets: it tells make what it's, well, making. The files after the colons are the dependencies: in other words, the files that make up the desired result file.  The lines after are the commands that need to be executed, like moving files or converting document types. 
+
+#### Pandoc
+
+Pandoc is a powerful command line program that can convert documents of various formats from one to the other.  In this workflow, the biggest advantage of pandoc is that we can write a paper using a relatively simple format like markdown, and then later convert that to whatever format we'd need.  Writing this directly in HTML would take significantly longer.  Pandoc could even covert this to a Word document if we wanted! 
