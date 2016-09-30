@@ -9,6 +9,10 @@
 </head>
 <body>
 <h3 id="introduction">Introduction</h3>
+<div class="figure">
+<img src="https://github.com/tim-mcginley/stat159-project1/blob/master/images/stat159-logo.png" />
+
+</div>
 <p>This paper is designed to increase facility with the basic building blocks that collaborative and reproducible science are built on, such as the using the shell, text editors, markdown, version control, makefiles, etc. In the sections following, I will discuss the process and tools that go into making a paper such as the one you are currently reading, and some of the reasons why I did things the way I did.</p>
 <h3 id="discussion">Discussion</h3>
 <h4 id="file-structure-setup">File Structure Setup</h4>
@@ -42,6 +46,10 @@ nano 02-discussion.md</code></pre>
             - 02-discussion.md
             - 03-conclusions.md</code></pre>
 <h4 id="file-editing-and-markdown">File Editing and Markdown</h4>
+<div class="figure">
+<img src="https://github.com/tim-mcginley/stat159-project1/blob/master/images/markdown-logo.png" />
+
+</div>
 <p>At this point, the next stage is to write the actual bulk of the project using markdown. Markdown is a basic language and format designed to make text formatting (paragraphs, tables, quotes, code, colors, etc) simple and easy to do using plain text. Text formatted in markdown is easy to read and edit, and will almost definitely format correctly no matter who or what views it, wherever they are. It is quickly becoming a univeral language of sorts for academics, scientists, and many online communities including reddit. It is also easily converted to other common formats, such as html or pdf.</p>
 <p>Markdown can do a lot, such as headers (this produces the header to this section):</p>
 <pre><code>#### File Editing and Markdown</code></pre>
@@ -65,9 +73,15 @@ nano 02-discussion.md</code></pre>
 </tr>
 </tbody>
 </table>
+<p>And this produces the GitHub logo up there:</p>
+<pre><code>![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/markdown-logo.png)</code></pre>
 <p>Markdown can do much, much more formatting than this. I'll highlight any fancy formatting I do down the stretch and show how it was done.</p>
 <p>To make life easier on myself, I switched from using nano in the command line to a more robust standalone markdown called MacDown, and it is with that application that I wrote these words.</p>
 <h4 id="git">Git</h4>
+<div class="figure">
+<img src="https://github.com/tim-mcginley/stat159-project1/blob/master/images/git-logo.png" />
+
+</div>
 <p>Any project, especially collaborative projects, require keeping careful track of changes made and a firm grasp on the chronology of the versions produced. Working on the wrong version of the file can lead to disaster. To help with this and other issues like accidental deletion, version control software like Git has become very popular. Software like Git keeps track of changes and updates made to files and folders as you make them (and &quot;commit&quot; the changes), and keeps a record of each committed change such that files from any version can be recreated seamlessly. This allows multiple people to work on the same project without risk of permanently overwriting or deleting anything, and is helpful for organization and backup purposes even for personal projects. Directories that are managed by git are called &quot;Repositories.&quot;</p>
 <p>I set up &quot;project1&quot; as a git repository by using the following commands.</p>
 <pre><code>cd ~/Documents/159/stat159projects/project1
@@ -78,6 +92,10 @@ git status
 git commit -m &quot;Initial commit with files in place&quot;</code></pre>
 <p>This last command includes a note describing the action taken.</p>
 <h4 id="github">GitHub</h4>
+<div class="figure">
+<img src="https://github.com/tim-mcginley/stat159-project1/blob/master/images/github-logo.png" />
+
+</div>
 <p>Git repositories also have the ability to be used remotely, and one website which takes advantage of this fact is GitHub. A git repository that is set up to work with GitHub gets uploaded to and displayed on the website, making a project accessible from anywhere on earth. It also allows for easy collaborating and includes many tools to help merge and organize large collaborative projects. GitHub is also a way to publish certain versions of code for others, even unknown internet users, to study or improve on. This makes it a 'hub' of activity for open source software development.</p>
 <p>Here's how we can tie our repository to my public one on GitHub.</p>
 <pre><code>git remote add origin https://github.com/tim-mcginley/stat159-project1.git
@@ -99,10 +117,15 @@ paper.md: paper/sections/00-abstract.md paper/sections/01-introduction.md paper/
     cd paper/sections; pandoc *.md -s -o paper.md; mv paper.md ../</code></pre>
 <p>The words before the colons are targets: it tells make what it's, well, making. The files after the colons are the dependencies: in other words, the files that make up the desired result file. The lines after are the commands that need to be executed, like moving files or converting document types.</p>
 <h4 id="pandoc">Pandoc</h4>
+<div class="figure">
+<img src="https://github.com/tim-mcginley/stat159-project1/blob/master/images/pandoc-logo.png" />
+
+</div>
 <p>Pandoc is a powerful command line program that can convert documents of various formats from one to the other. In this workflow, the biggest advantage of pandoc is that we can write a paper using a relatively simple format like markdown, and then later convert that to whatever format we'd need. Writing this directly in HTML would take significantly longer. Pandoc could even covert this to a Word document if we wanted!</p>
 <h3 id="conclusions">Conclusions</h3>
 <p>This project has been a great hands-on method of learning the mechanics of a reproducible workflow. I'll take this space to discuss some of the lessons learned and some other takeaways from the experience.</p>
 <p>Front to back, the project has taken me about three hours to complete. Most of this time has been spent physically writing, which was easily the most challenging part. The majority of the rest of the time was spent figuring out various syntax issues, primarily on Google or by going through the Stat 159 github and previous lab work. Other than this research, I didn't use any outside resources other than MacDown, which has been really helpful when it comes to the actual writing.</p>
 <p>I did this almost entirely on my own, save for a few questions I had answered by a friend of mine who completed the project before I did– mainly about how to use the GitHub website, which I am not super familar with. I didn't get &quot;stuck&quot; really at any point, although it did take me a second to &quot;get&quot; the whole phony makefile target procedure.</p>
+<p>Overall this went smoothly and I feel prepared to replicate this procedure with real analysis soon.</p>
 </body>
 </html>

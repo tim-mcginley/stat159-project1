@@ -58,6 +58,7 @@ project1/
 ```
 
 #### File Editing and Markdown
+![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/markdown-logo.png)
 
 At this point, the next stage is to write the actual bulk of the project using markdown.  Markdown is a basic language and format designed to make text formatting (paragraphs, tables, quotes, code, colors, etc) simple and easy to do using plain text.  Text formatted in markdown is easy to read and edit, and will almost definitely format correctly no matter who or what views it, wherever they are. It is quickly becoming a univeral language of sorts for academics, scientists, and many online communities including reddit.  It is also easily converted to other common formats, such as html or pdf.
 
@@ -84,12 +85,19 @@ And this produces an informative table:
 | --- | ---|
 | 50 | 43 |
 
+And this produces the GitHub logo up there:
+
+```
+![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/markdown-logo.png)
+```
+
 Markdown can do much, much more formatting than this.  I'll highlight any fancy formatting I do down the stretch and show how it was done.
 
 To make life easier on myself, I switched from using nano in the command line to a more robust standalone markdown called MacDown, and it is with that application that I wrote these words.
 
 
 #### Git
+![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/git-logo.png)
 
 Any project, especially collaborative projects, require keeping careful track of changes made and a firm grasp on the chronology of the versions produced.  Working on the wrong version of the file can lead to disaster.  To help with this and other issues like accidental deletion, version control software like Git has become very popular.  Software like Git keeps track of changes and updates made to files and folders as you make them (and "commit" the changes), and keeps a record of each committed change such that files from any version can be recreated seamlessly.  This allows multiple people to work on the same project without risk of permanently overwriting or deleting anything, and is helpful for organization and backup purposes even for personal projects.  Directories that are managed by git are called "Repositories."
 
@@ -106,6 +114,7 @@ git commit -m "Initial commit with files in place"
 This last command includes a note describing the action taken.
 
 #### GitHub
+![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/github-logo.png)
 
 Git repositories also have the ability to be used remotely, and one website which takes advantage of this fact is GitHub.  A git repository that is set up to work with GitHub gets uploaded to and displayed on the website, making a project accessible from anywhere on earth.  It also allows for easy collaborating and includes many tools to help merge and organize large collaborative projects. GitHub is also a way to publish certain versions of code for others, even unknown internet users, to study or improve on.  This makes it a 'hub' of activity for open source software development. 
 
@@ -143,5 +152,7 @@ paper.md: paper/sections/00-abstract.md paper/sections/01-introduction.md paper/
 The words before the colons are targets: it tells make what it's, well, making. The files after the colons are the dependencies: in other words, the files that make up the desired result file.  The lines after are the commands that need to be executed, like moving files or converting document types. 
 
 #### Pandoc
+
+![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/pandoc-logo.png)
 
 Pandoc is a powerful command line program that can convert documents of various formats from one to the other.  In this workflow, the biggest advantage of pandoc is that we can write a paper using a relatively simple format like markdown, and then later convert that to whatever format we'd need.  Writing this directly in HTML would take significantly longer.  Pandoc could even covert this to a Word document if we wanted! 

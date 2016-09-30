@@ -7,4 +7,6 @@ Front to back, the project has taken me about three hours to complete. Most of t
 
 I did this almost entirely on my own, save for a few questions I had answered by a friend of mine who completed the project before I did– mainly about how to use the GitHub website, which I am not super familar with.  I didn't get "stuck" really at any point, although it did take me a second to "get" the whole phony makefile target procedure.
 
+Overall this went smoothly and I feel prepared to replicate this procedure with real analysis soon.
+
 

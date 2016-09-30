@@ -1,5 +1,7 @@
 ### Introduction
 
+![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/stat159-logo.png)
+
 This paper is designed to increase facility with the basic building
 blocks that collaborative and reproducible science are built on, such as
 the using the shell, text editors, markdown, version control, makefiles,
@@ -82,6 +84,8 @@ So our current file structure for the project is:
 
 #### File Editing and Markdown
 
+![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/markdown-logo.png)
+
 At this point, the next stage is to write the actual bulk of the project
 using markdown. Markdown is a basic language and format designed to make
 text formatting (paragraphs, tables, quotes, code, colors, etc) simple
@@ -111,6 +115,10 @@ And this produces an informative table:
   ----- -------
   50    43
 
+And this produces the GitHub logo up there:
+
+    ![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/markdown-logo.png)
+
 Markdown can do much, much more formatting than this. I'll highlight any
 fancy formatting I do down the stretch and show how it was done.
 
@@ -119,6 +127,8 @@ line to a more robust standalone markdown called MacDown, and it is with
 that application that I wrote these words.
 
 #### Git
+
+![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/git-logo.png)
 
 Any project, especially collaborative projects, require keeping careful
 track of changes made and a firm grasp on the chronology of the versions
@@ -145,6 +155,8 @@ I set up "project1" as a git repository by using the following commands.
 This last command includes a note describing the action taken.
 
 #### GitHub
+
+![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/github-logo.png)
 
 Git repositories also have the ability to be used remotely, and one
 website which takes advantage of this fact is GitHub. A git repository
@@ -200,6 +212,8 @@ document types.
 
 #### Pandoc
 
+![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/pandoc-logo.png)
+
 Pandoc is a powerful command line program that can convert documents of
 various formats from one to the other. In this workflow, the biggest
 advantage of pandoc is that we can write a paper using a relatively
@@ -226,3 +240,6 @@ answered by a friend of mine who completed the project before I did–
 mainly about how to use the GitHub website, which I am not super familar
 with. I didn't get "stuck" really at any point, although it did take me
 a second to "get" the whole phony makefile target procedure.
+
+Overall this went smoothly and I feel prepared to replicate this
+procedure with real analysis soon.

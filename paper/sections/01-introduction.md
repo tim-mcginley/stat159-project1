@@ -1,3 +1,5 @@
 ### Introduction
+![](https://github.com/tim-mcginley/stat159-project1/blob/master/images/stat159-logo.png)
+
 This paper is designed to increase facility with the basic building blocks that collaborative and reproducible science are built on, such as the using the shell, text editors, markdown, version control, makefiles, etc.  In the sections following, I will discuss the process and tools that go into making a paper such as the one you are currently reading, and some of the reasons why I did things the way I did. 
 
